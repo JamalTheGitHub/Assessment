@@ -1,0 +1,5 @@
+Welcome <%= current_user.first_name %>
+
+<% if logged_in?%>
+<%= link_to 'Logout', logout_path, method: :delete%>
+<% end %>
