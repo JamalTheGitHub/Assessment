@@ -25,3 +25,11 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore Google related keys
+
+oauth client id -
+372706616947-m4vmgflu55sir15j8vm364331lnkn5a3.apps.googleusercontent.com
+
+client secret - 
+mQD0FME-1OpgMfnJGOEMl0xp
