@@ -24,10 +24,13 @@ ActiveRecord::Schema.define(version: 2019_01_14_232932) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
     t.string "first_name"
     t.string "last_name"
     t.string "email"
     t.string "password_digest"
+    t.string "oauth_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
