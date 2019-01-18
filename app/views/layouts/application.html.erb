@@ -48,6 +48,8 @@
           </form>
         </div>
       </nav>
+
+      <%= yield %>
       <% else %>
         <h1>Welcome</h1>
           <%= form_for(:session, url: login_path) do |f| %>
@@ -64,6 +66,6 @@
         <%= link_to 'SignUp', new_user_path %>
       <% end %>
     </div>
-    <%= yield %>
+    
   </body>
 </html>

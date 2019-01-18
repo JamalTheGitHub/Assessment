@@ -5,8 +5,13 @@ RSpec.describe Post, type: :model do
   context "validations" do
     user = User.new(id: 1,first_name: "First", last_name: "Last", email: "FL@hotmail.com", password: "123")
     it "should create successfully" do
-      post = user.posts.build(content: "Content").save
+      post = user.posts.build(title: "Title", content: "Content").save
       expect(post).to eq(true)
+    end
+
+    it "should fail without title" do
+      post = user.posts.build(title: nil).save
+      expect(post).to eq(false)
     end
 
     it "should fail without content" do
