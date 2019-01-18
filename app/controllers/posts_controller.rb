@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
+  def index
+    @user = User.find_by(id: params[:user_id])
+  end
+
   def new
     @post = Post.new
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to root_url
     else
@@ -13,7 +17,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.all
+    @user = User.find(params[:id])
+    @post = Post.find_by(user_id: params[:id])
   end
 
   private
