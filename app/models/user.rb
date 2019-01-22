@@ -16,4 +16,8 @@ class User < ApplicationRecord
       user.save!
     end
   end
+
+  def name
+    "#{first_name} " + "#{last_name}"
+  end
 end

@@ -66,3 +66,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # google oauth
 gem "omniauth-google-oauth2", "~> 0.2.1"
+
+# jquery
+gem 'jquery-rails'
+
+#serviceworker
+gem 'serviceworker-rails'
+
+#faker
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'

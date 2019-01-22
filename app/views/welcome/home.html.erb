@@ -1,0 +1,4 @@
+Hello, <%= current_user.name %>
+<br/>
+<%= link_to "Create Post", new_user_post_path(current_user), id:'post_new', remote: true %>
+<%= link_to "See Titles?", posts_path %>
