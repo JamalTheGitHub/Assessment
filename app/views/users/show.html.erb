@@ -1,3 +1,13 @@
-<h3>Welcome <%= current_user.first_name %><h3>
-
-<%= button_to "See your posts?", user_posts_path(@user), method: :get %>
+<h3>Profile Of <strong><%= @user.name %><strong></h3>
+<h4>Details</h4>
+Email: <%= @user.email%>
+<%= @user.created_at%>
+<br/>
+<% @user.posts.each do |p| %>
+<%= p.title %>
+<br/>
+<%= p.content%>
+<%= link_to "View", user_post_path(p.user, p.id) %>
+<%= link_to "Delete", user_post_path(p.user, p.id), method: :delete, data: { confirm: "Are you serious?" } %>
+<br/>
+<% end %>

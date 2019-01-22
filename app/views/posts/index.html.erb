@@ -1,5 +1,14 @@
-<% @user.posts.each do |p| %>
-<%= p.title %>
-<br/>
-<%= p.content %>
-<% end %>
+Hello, <%= current_user.name%>
+
+<div class="card">
+  <div class="card-body">
+    <% @posts.each do |p| %>
+    <%= p.title %>
+    <br/>
+    <%= p.content %>
+    <br/>
+    <%= button_to "Check User", user_path(p.user), method: :get%>
+    <br/>
+    <% end %>
+  </div>
+</div>

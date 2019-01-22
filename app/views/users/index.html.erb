@@ -1,0 +1,6 @@
+<% @users.each do |u| %>
+<%= u.first_name %>
+<%= u.last_name %>
+<%= link_to "Profile", user_path(u) %>
+<br/>
+<% end %>
